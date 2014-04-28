@@ -28,10 +28,7 @@ if __name__ == "__main__":
 		for r in range(len(w)):
 			disp=""
 			for c in range(len(w[r])):
-				if w[r][c]==1:
-					disp+="#"
-				else:
-					disp+=" "
+				disp+="#" if w[r][c]==1 else " "
 			print(disp)
 			
 		time.sleep(0.1) 
