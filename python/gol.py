@@ -3,27 +3,22 @@ import time
 
 class GOL:
 	def __init__(self):
-		self.d=30
-		self.w = [[0 for j in range(30)] for i in range(30)]
+		self.d=25
+		self.w = [[0 for j in range(self.d)] for i in range(self.d)]
+	
+	def fill(self, fillArray):
+		for f in fillArray:
+			self.w[f[0]][f[1]]=1
+			
 
-		#setup glider
-		self.w[0][1]=1
-		self.w[1][2]=1
-		self.w[2][0]=1
-		self.w[2][1]=1
-		self.w[2][2]=1
-
-	#display board
 	def show(self):
+		time.sleep(0.1) 
 		os.system('cls')
-
 		for r in range(len(self.w)):
 			disp=""
 			for c in range(len(self.w[r])):
 				disp+="#" if self.w[r][c]==1 else " "
-			print(disp)
-			
-		time.sleep(0.1) 
+			print(disp)			
 
 	def next(self):
 		w=self.w
@@ -32,7 +27,6 @@ class GOL:
 
 		for r in range(len(w)):
 			for c in range(len(w[r])):
-				#count up neighboors
 				n=0
 				if r>0:
 					if c>0:
@@ -50,12 +44,7 @@ class GOL:
 					n+=w[r+1][c]
 					if c<d-1:
 						n+=w[r+1][c+1]
-
 				#compute next generation
-				if(n<2 or n>3):
-					w2[r][c]=0
-				if(n==2):
-					w2[r][c]=w[r][c]
-				if(n==3):
-					w2[r][c]=1
+				if(n==3 or (n==2 and w[r][c]==1)):
+					w2[r][c]=1 
 		self.w=w2
