@@ -11,7 +11,7 @@ class GOL:
 			self.w[f[0]][f[1]]=1
 			
 	def show(self):
-		time.sleep(0.1) 
+		
 		os.system('cls')
 		for r in range(len(self.w)):
 			disp=""

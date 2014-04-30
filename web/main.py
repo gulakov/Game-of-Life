@@ -7,7 +7,7 @@ if __name__ == "__main__":
 	g = GOL()
 
 	#setup glider
-	g.fill([[0,1],[1,2],[2,0],[2,1],[2,2]])
+	g.fill(eval(sys.argv[2]))
 
 	for e in range(int(sys.argv[1])):
 		g.next()

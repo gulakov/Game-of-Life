@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <time.h>
 #include "GOL.h"
-
 using namespace std;
 
 void GOL::fill(int p[][2], int s){
@@ -20,16 +19,12 @@ void GOL::show(){
 				cout << "#";
 			else
 				cout << " ";
-
 		cout << endl;
 	}
-
 	Sleep (100);
 };
 
-
 void GOL::next(){
-
 	int w2[d][d] = {};
 
 	for (int r=0; r<d; r++)
@@ -54,17 +49,13 @@ void GOL::next(){
 				if (c<d-1)
 					n+=w[r+1][c+1];
 			}
-
-			if (n==3 || (n==2 && w[r][c]==1))
+			if (n==8 || n==3 || (n==2 && w[r][c]==0))
 				w2[r][c]=1;
 		}
 
 	for (int i=0; i<d; i++)
 		for (int j=0; j<d; j++)
 			w[i][j]=w2[i][j];
-
 };
 
 GOL::GOL() { }
-
-GOL::~GOL() { }
