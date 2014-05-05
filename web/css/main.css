@@ -1,0 +1,76 @@
+body, html{
+	height: 100%;
+
+	width: 100%;
+	
+}
+
+.panel{
+	margin-top: 3px;
+	margin: 0px auto;
+	width:50%;
+	position: relative;
+}
+
+.panel-body{
+	line-height: 15px !important;
+}
+.a{
+	text-decoration:none;
+	height: 5px;
+	width: 5px;
+	display:inline-block;
+}
+.on{
+	background-color: black;
+}
+#gol{
+	cursor: pointer;
+	border: 1px solid black;
+	display: inline-block;
+}
+
+
+pre{
+	background-color: white;
+	border:0px;
+	margin:0px;
+	line-height: 5px;
+	cursor: pointer;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+
+}
+#info{
+	font-size: 70%;
+	position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+
+#pattern{
+	float: left;
+	width: 130px;
+}
+#about{
+	float: left;
+	left: 140px;
+	width: 75%;
+
+}
+
+#controls{
+	cursor: pointer;
+}
+
+#controls, #gol{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+</style>

@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(int argc, char* argv[]){
-	int gen = 50;
+	int gen;
 	if (atoi(argv[1])>0)
 		gen = atoi(argv[1]);
 
