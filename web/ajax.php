@@ -1,5 +1,5 @@
 <?php
-	$con = mysqli_connect("localhost", "root", "sasha", "main");
+	$con = mysqli_connect("localhost", "root", "pass", "main");
 
 	
 	$ip = $_SERVER['REMOTE_ADDR'];
